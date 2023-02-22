@@ -1,0 +1,26 @@
+VAR
+word: string
+left_index, right_index: integer
+is_palindrome: boolean
+BEGIN
+read(word)
+
+left_index := 1
+right_index := length(word)
+is_palindrome := true
+
+WHILE (left_index < right_index) AND is_palindrome DO
+IF word[left_index] = word[right_index] THEN
+left_index := left_index + 1
+right_index := right_index - 1
+ELSE
+is_palindrome := false
+END_IF
+END_WHILE
+
+IF is_palindrome THEN
+write("The word is a palindrome")
+ELSE
+write("The word is not a palindrome")
+END_IF
+END.
